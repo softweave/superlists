@@ -3,6 +3,7 @@ __author__ = 'janee'
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import unittest
+import time
 
 class NewVisitorTest(unittest.TestCase):
 
@@ -35,6 +36,7 @@ class NewVisitorTest(unittest.TestCase):
 
         # hit enter, page updates and the page lists here entry as an item in a to-do list
         inputbox.send_keys(Keys.ENTER)
+        # time.sleep(10)
 
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
